@@ -2,6 +2,7 @@ using System;
 
 public class relogio
 {
+    //Módulo para incrementar segundos
     static int Segundos(int segundos){
         segundos++;
         return segundos;
@@ -22,9 +23,11 @@ static void Main(){
     int horas = 0;
     
     do{
+//se segundos < 60, segundos = o retorno do primeiro método(que incrementa segundos)
         if(segundos<60){
             segundos = Segundos(segundos);
         }
+//se segundos == 60, não vai incrementar segundos, portanto deve incrementar minutos, sendo assim, minutos = o retorno do método Minutos(minutos)
         if(segundos==60){
             segundos = 0;
             minutos = Minutos(minutos);
