@@ -1,8 +1,9 @@
 using System;
 
-public class HelloWorld
+public class equacaosegundograu
 {
     static double[] raizes(double a, double b, double c){
+        //esse módulo vai retornar um vetor por isso ele tem [] :)
     double delta = 0;
     double x1 = 0, x2 = 0, status = 0;
     delta = (b * b) - (4 * a * c);
@@ -11,6 +12,7 @@ public class HelloWorld
         x2 = (-b - Math.Sqrt(delta))/(2*a);
         status= 2;
     double[] retorno = new double[3]{x1,x2,status};
+        //criei o vetor que vai ser retornado
     return retorno;
     }
     else if(delta == 0){
@@ -40,6 +42,7 @@ Console.WriteLine("digite o valor de a, b e c");
        a = double.Parse(Console.ReadLine());
    }
    saida = raizes(a,b,c);
+    //aqui eu "puxo" o módulo (acho que aqui torna o vetor saida igual ao vetor retorno que eu fiz la em cima)
    Console.WriteLine($"status e {saida[2]}, x1 e igual a {saida[0]}, x2 e igual a {saida[1]}");
 }
 }
